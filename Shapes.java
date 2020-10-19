@@ -1,25 +1,16 @@
-import java.util.*;
-
 public class Shapes{
-  public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
-    System.out.print("Enter the side length: ");
-    double side = input.nextDouble();
-    square(side);
+  public static void main(String[] args){
+    System.out.println(square(2));
+    System.out.println(triangle(3,4));
+    System.out.println(cube(5));
   }
-
-  /*
-   * N: square
-   * P: to calculate the area of any square
-   * I: a side measure (double)
-   * R:
-   */
-  public static void square(double s){
-    //side times side
-    double a = s * s;
-
-    //generate some output
-    System.out.println("A square with side " + s + " has an area of " + a);
-  }//close square method
-
+  public static double square(double side){
+    return (side * side);
+  }
+  public static double triangle(double base, double height){
+    return (base * height * 1/2);
+  }
+  public static double cube(double side){
+    return (6 * side * side);
+  }
 }
